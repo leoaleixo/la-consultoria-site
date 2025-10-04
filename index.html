@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Consultoria — SAP ABAP & Integração (PI/PO)</title>
+  <meta name="description" content="Consultoria SAP com foco em ABAP e Integração (PI/PO). Entrega ágil, código limpo e soluções sob medida.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;       /* fundo escuro elegante */
+      --card:#121a33;     /* cards */
+      --muted:#94a3b8;    /* texto secundário */
+      --text:#e2e8f0;     /* texto principal */
+      --brand:#7c3aed;    /* roxo sutil (alude a tech) */
+      --brand-2:#22d3ee;  /* acento */
+      --ring:0 0 0 3px rgba(124,58,237,.25);
+      --radius:18px;
+      --shadow:0 10px 25px rgba(2,6,23,.3);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,.15), transparent 60%), var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.2px}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    .nav a.btn{padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));font-weight:600}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:36px 0}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid rgba(148,163,184,.18);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero .headline{font-size:clamp(28px,5vw,46px);line-height:1.08;margin:0 0 10px}
+    .hero p{color:var(--muted);font-size:clamp(15px,2.5vw,18px)}
+    .hero .actions{display:flex;gap:12px;margin-top:20px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:0;padding:12px 18px;border-radius:14px;background:var(--card);color:var(--text);font-weight:600;box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .section{padding:42px 0}
+    .section h2{margin:0 0 10px;font-size:clamp(22px,3.5vw,28px)}
+    .muted{color:var(--muted)}
+    .list{display:grid;gap:12px;margin:14px 0 0;padding:0}
+    .item{list-style:none;padding:14px 16px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(148,163,184,.16)}
+    .kpis{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+    .kpi{flex:1 1 160px;padding:14px 16px;border-radius:14px;background:linear-gradient(180deg,rgba(34,211,238,.06),rgba(124,58,237,.06));border:1px solid rgba(148,163,184,.2)}
+    .kpi b{font-size:20px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(124,58,237,.18);color:#e9d5ff;font-weight:600;font-size:12px;letter-spacing:.3px}
+    .panel{padding:18px}
+    .footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(148,163,184,.18)}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:13px;color:#a5b4fc}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="container nav">
+    <div class="brand"><span class="logo" aria-hidden></span> <span>La Consultoria</span></div>
+    <nav>
+      <a class="btn" href="#servicos">Serviços</a>
+      <a class="btn" href="#sobre">Sobre</a>
+      <a class="btn primary" href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1 class="headline">SAP <span class="badge">ABAP</span> & Integração <span class="badge">PI/PO</span> — entrega ágil e código de qualidade.</h1>
+        <p>Projetos sob medida, foco em integração estável e manutenção simples. Parcerias flexíveis para cobrir picos de demanda — como uma consultoria, sem burocracia.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contato">Fale comigo</a>
+          <a class="btn" href="#servicos">Ver serviços</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><b>15+ anos</b><br><span class="muted">experiência SAP</span></div>
+          <div class="kpi"><b>ABAP • PI/PO</b><br><span class="muted">S/4HANA & ECC</span></div>
+          <div class="kpi"><b>Integrações críticas</b><br><span class="muted">REST/JSON, IDoc, RFC</span></div>
+        </div>
+      </div>
+      <div class="card panel">
+        <h3 style="margin-top:0">Destaques técnicos</h3>
+        <ul class="list">
+          <li class="item">Refatoração ABAP (legado → OO), padrões de projeto e qualidade de código</li>
+          <li class="item">Integrações PI/PO, BTP Integration Suite, APIs REST/JSON</li>
+          <li class="item">Monitoramento, tracing e testes — confiabilidade em produção</li>
+          <li class="item">Documentação objetiva e handover para o time</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section">
+      <h2>Serviços</h2>
+      <p class="muted">Atuação sob demanda, pacotes fechados ou time & material.</p>
+      <div class="grid cols-3">
+        <article class="card panel">
+          <h3 style="margin-top:0">ABAP — Evolução & Suporte</h3>
+          <ul class="list">
+            <li class="item">Conversão de FORMs → classes globais (OO)</li>
+            <li class="item">ALV, IDocs, BAPIs, BADIs, Enhancements</li>
+            <li class="item">Performance e correções em produção</li>
+          </ul>
+        </article>
+        <article class="card panel">
+          <h3 style="margin-top:0">Integração — PI/PO & BTP</h3>
+          <ul class="list">
+            <li class="item">REST/JSON, SOAP, JDBC, SFTP</li>
+            <li class="item">Modelagem de mensagens e XSD/JSON</li>
+            <li class="item">Observabilidade e testes ponta a ponta</li>
+          </ul>
+        </article>
+        <article class="card panel">
+          <h3 style="margin-top:0">Arquitetura & Boas Práticas</h3>
+          <ul class="list">
+            <li class="item">Code review, lint e padrões de repositório</li>
+            <li class="item">Documentação técnica e ETs</li>
+            <li class="item">Handover e treinamento rápido</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+      <h2>Sobre a La Consultoria</h2>
+      <div class="grid cols-2">
+        <div class="card panel">
+          <p>A La Consultoria é liderada por <b>Leonardo Aguilar Aleixo</b>, especialista em SAP ABAP e Integração. Atuamos de forma <b>enxuta, direta e confiável</b>, com possibilidade de ampliar a equipe por meio de parceiros — transparência total para entregar no prazo e com qualidade.</p>
+          <p class="muted">Base em São Paulo • Atendimento remoto/onsite • PJ • Emissão de NF</p>
+        </div>
+        <div class="card panel">
+          <h3 style="margin-top:0">Stack & Ferramentas</h3>
+          <p class="mono">ABAP OO • PI/PO • S/4HANA • BTP Integration Suite • IDoc • RFC • REST/JSON • XSD • ALV • Git</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <div class="card panel">
+        <p>Quer discutir uma demanda ou tirar dúvida rápida? Escreva para <a href="mailto:leonardo@laconsultoria.dev.br"><b>leonardo@laconsultoria.dev.br</b></a> ou clique no botão abaixo.</p>
+        <p>
+          <a class="btn primary" href="mailto:leonardo@laconsultoria.dev.br">Enviar e‑mail</a>
+          <a class="btn" href="https://www.linkedin.com/company/la-consultoria" target="_blank" rel="noopener">LinkedIn da empresa</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    © <span id="y"></span> La Consultoria — SAP ABAP & Integração (PI/PO). Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
